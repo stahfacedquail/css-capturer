@@ -6,7 +6,10 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.8"
+    "express": "3.4.8",
+    "bookshelf": "~0.7.9",
+    "knex": "~0.7.3",
+    "pg.js": "~4.1.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -30,7 +33,8 @@
     "load-grunt-tasks": "~0.1.0",
     "connect-livereload": "~0.2.0",
     "time-grunt": "~0.2.1",
-    "jshint-stylish": "~0.1.3"
+    "jshint-stylish": "~0.1.3",
+    "grunt-nodemon": "~0.3.0"
   },
   "engines": {
     "node": ">=0.8.0"

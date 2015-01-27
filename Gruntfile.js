@@ -1,6 +1,6 @@
 'use strict';
 var LIVERELOAD_PORT = 35729;
-var SERVER_PORT = 9000;
+var SERVER_PORT = 3000;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
@@ -24,6 +24,8 @@ module.exports = function (grunt) {
         app: 'app',
         dist: 'dist'
     };
+	
+	grunt.loadNpmTasks('grunt-nodemon');
 
     grunt.initConfig({
         yeoman: yeomanConfig,
@@ -275,7 +277,13 @@ module.exports = function (grunt) {
                     ]
                 }
             }
-        }
+        },
+		
+		nodemon: {
+			dev: {
+				script: 'app.js'
+			}
+		}
     });
 
     grunt.registerTask('createDefaultTemplate', function () {
@@ -311,8 +319,9 @@ module.exports = function (grunt) {
             'createDefaultTemplate',
             'jst',
             'compass:server',
-            'connect:livereload',
+           // 'connect:livereload',
             'open:server',
+			'nodemon',
             'watch'
         ]);
     });

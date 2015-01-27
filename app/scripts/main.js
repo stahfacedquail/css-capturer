@@ -1,7 +1,7 @@
-/*global CSSCapturer, $*/
+/*global cssCapturer, $*/
 
 
-window.CSSCapturer = {
+window.cssCapturer = {
     Models: {},
     Collections: {},
     Views: {},
@@ -9,10 +9,14 @@ window.CSSCapturer = {
     init: function () {
         'use strict';
         console.log('Hello from Backbone!');
+		Object.keys(this.Routers).forEach(function(router) {
+			new this.Routers[router]();
+		}, this);
+		Backbone.history.start();
     }
 };
 
 $(document).ready(function () {
     'use strict';
-    CSSCapturer.init();
+    cssCapturer.init();
 });

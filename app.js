@@ -5,6 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
+var questionnaires = require('./routes/questionnaires');
 var http = require('http');
 var path = require('path');
 
@@ -18,16 +19,16 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'app/scripts')));
-app.use(express.static(path.join(__dirname, 'app/styles')));
-app.use(express.static(path.join(__dirname, 'app/images')));
+app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(__dirname, '.tmp')));
+app.use(function(req, res, next) { console.log('a request has come!', req); });
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/questionnaire', questionnaires.fetch);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

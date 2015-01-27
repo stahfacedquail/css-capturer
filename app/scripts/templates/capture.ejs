@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-1"><button class="btn btn-default"><i class="fa fa-fast-backward"></i></button></div>
+    <div class="col-xs-1"><button class="btn btn-default"><i class="fa fa-play fa-flip-horizontal"></i></button></div>
+    <div class="col-xs-2">
+        <input id="idx" type="number" class="form-control" />
+    </div>
+    <label for="idx" class="col-xs-2">of 500</label>
+    <div class="col-xs-1"><button class="btn btn-default"><i class="fa fa-play"></i></button></div>
+    <div class="col-xs-1"><button class="btn btn-default"><i class="fa fa-fast-forward"></i></button></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        <select id="type" class="form-control">
+            <option value="outpatient">Outpatient survey</option>
+            <option value="inpatient">Inpatient survey</option>
+        </select>
+    </div>
+</div>
+
+<br style="clear:both;" />
+
+<table id="questions" class="table">
+	<thead>
+		<td>Question</td>
+		<td>Strongly<br />disagree</td>
+		<td>Disagree</td>
+		<td>Not<br />sure</td>
+		<td>Agree</td>
+		<td>Strongly<br />agree</td>
+	</thead>
+	<tbody>
+		<tr><td>1. It takes longer than 30 minutes to get to the hospital.</td><td class="text-center"><input type="radio" name="q1" /></td><td class="text-center"><input type="radio" name="q1" /></td><td class="text-center"><input type="radio" name="q1" /></td><td class="text-center"><input type="radio" name="q1" /></td><td class="text-center"><input type="radio" name="q1" /></td></tr>
+		<tr><td>2. It costs more than R7 to get to the hospital.</td><td class="text-center"><input type="radio" name="q2" /></td><td class="text-center"><input type="radio" name="q2" /></td><td class="text-center"><input type="radio" name="q2" /></td><td class="text-center"><input type="radio" name="q2" /></td><td class="text-center"><input type="radio" name="q2" /></td></tr>
+		<tr><td>3. The hospital is in good condition.</td><td class="text-center"><input type="radio" name="q3" /></td><td class="text-center"><input type="radio" name="q3" /></td><td class="text-center"><input type="radio" name="q3" /></td><td class="text-center"><input type="radio" name="q3" /></td><td class="text-center"><input type="radio" name="q3" /></td></tr>
+		<tr><td>4. The hospital is clean.</td><td class="text-center"><input type="radio" name="q4" /></td><td class="text-center"><input type="radio" name="q4" /></td><td class="text-center"><input type="radio" name="q4" /></td><td class="text-center"><input type="radio" name="q4" /></td><td class="text-center"><input type="radio" name="q4" /></td></tr>
+		<tr><td>5. The Outpatients/Casualty department has convenient opening hours.</td><td class="text-center"><input type="radio" name="q5" /></td><td class="text-center"><input type="radio" name="q5" /></td><td class="text-center"><input type="radio" name="q5" /></td><td class="text-center"><input type="radio" name="q5" /></td><td class="text-center"><input type="radio" name="q5" /></td></tr>
+		<tr><td>6. The toilets are dirty.</td><td class="text-center"><input type="radio" name="q6" /></td><td class="text-center"><input type="radio" name="q6" /></td><td class="text-center"><input type="radio" name="q6" /></td><td class="text-center"><input type="radio" name="q6" /></td><td class="text-center"><input type="radio" name="q6" /></td></tr>
+		<tr><td>7. I had to wait a long time to get my folder.</td><td class="text-center"><input type="radio" name="q7" /></td><td class="text-center"><input type="radio" name="q7" /></td><td class="text-center"><input type="radio" name="q7" /></td><td class="text-center"><input type="radio" name="q7" /></td><td class="text-center"><input type="radio" name="q7" /></td></tr>
+		<tr><td>8. There was a bench for me to sit on while I waited.</td><td class="text-center"><input type="radio" name="q8" /></td><td class="text-center"><input type="radio" name="q8" /></td><td class="text-center"><input type="radio" name="q8" /></td><td class="text-center"><input type="radio" name="q8" /></td><td class="text-center"><input type="radio" name="q8" /></td></tr>
+		<tr><td>9. The person who gave me my folder was helpful.</td><td class="text-center"><input type="radio" name="q9" /></td><td class="text-center"><input type="radio" name="q9" /></td><td class="text-center"><input type="radio" name="q9" /></td><td class="text-center"><input type="radio" name="q9" /></td><td class="text-center"><input type="radio" name="q9" /></td></tr>
+		<tr><td>10. The nurse who treated me listened to my problems.</td><td class="text-center"><input type="radio" name="q10" /></td><td class="text-center"><input type="radio" name="q10" /></td><td class="text-center"><input type="radio" name="q10" /></td><td class="text-center"><input type="radio" name="q10" /></td><td class="text-center"><input type="radio" name="q10" /></td></tr>
+		<tr><td>11. The doctor who treated me was polite.</td><td class="text-center"><input type="radio" name="q11" /></td><td class="text-center"><input type="radio" name="q11" /></td><td class="text-center"><input type="radio" name="q11" /></td><td class="text-center"><input type="radio" name="q11" /></td><td class="text-center"><input type="radio" name="q11" /></td></tr>
+		<tr><td>12. I was pleased with the way I was treated at the hospital.</td><td class="text-center"><input type="radio" name="q12" /></td><td class="text-center"><input type="radio" name="q12" /></td><td class="text-center"><input type="radio" name="q12" /></td><td class="text-center"><input type="radio" name="q12" /></td><td class="text-center"><input type="radio" name="q12" /></td></tr>
+		<tr><td>13. The doctor explained to me what was wrong with me.</td><td class="text-center"><input type="radio" name="q13" /></td><td class="text-center"><input type="radio" name="q13" /></td><td class="text-center"><input type="radio" name="q13" /></td><td class="text-center"><input type="radio" name="q13" /></td><td class="text-center"><input type="radio" name="q13" /></td></tr>
+		<tr><td>14. My privacy was respected by all the staff.</td><td class="text-center"><input type="radio" name="q14" /></td><td class="text-center"><input type="radio" name="q14" /></td><td class="text-center"><input type="radio" name="q14" /></td><td class="text-center"><input type="radio" name="q14" /></td><td class="text-center"><input type="radio" name="q14" /></td></tr>
+		<tr><td>15. If I received medicine/pills, I did not have to wait long for them.</td><td class="text-center"><input type="radio" name="q15" /></td><td class="text-center"><input type="radio" name="q15" /></td><td class="text-center"><input type="radio" name="q15" /></td><td class="text-center"><input type="radio" name="q15" /></td><td class="text-center"><input type="radio" name="q15" /></td></tr>
+		<tr><td>16. Next time I am ill I will come back here.</td><td class="text-center"><input type="radio" name="q16" /></td><td class="text-center"><input type="radio" name="q16" /></td><td class="text-center"><input type="radio" name="q16" /></td><td class="text-center"><input type="radio" name="q16" /></td><td class="text-center"><input type="radio" name="q16" /></td></tr>
+		<tr class="inpatient-only"><td>17. The ward was clean.</td><td class="text-center"><input type="radio" name="q17" /></td><td class="text-center"><input type="radio" name="q17" /></td><td class="text-center"><input type="radio" name="q17" /></td><td class="text-center"><input type="radio" name="q17" /></td><td class="text-center"><input type="radio" name="q17" /></td></tr>
+		<tr class="inpatient-only"><td>18. The bedding was clean.</td><td class="text-center"><input type="radio" name="q18" /></td><td class="text-center"><input type="radio" name="q18" /></td><td class="text-center"><input type="radio" name="q18" /></td><td class="text-center"><input type="radio" name="q18" /></td><td class="text-center"><input type="radio" name="q18" /></td></tr>
+		<tr class="inpatient-only"><td>19. The food was good.</td><td class="text-center"><input type="radio" name="q19" /></td><td class="text-center"><input type="radio" name="q19" /></td><td class="text-center"><input type="radio" name="q19" /></td><td class="text-center"><input type="radio" name="q19" /></td><td class="text-center"><input type="radio" name="q19" /></td></tr>
+		<tr class="inpatient-only"><td>20. Visiting hours were not long enough.</td><td class="text-center"><input type="radio" name="q20" /></td><td class="text-center"><input type="radio" name="q20" /></td><td class="text-center"><input type="radio" name="q20" /></td><td class="text-center"><input type="radio" name="q20" /></td><td class="text-center"><input type="radio" name="q20" /></td></tr>
+		<tr class="inpatient-only"><td>21. The staff at the hospital answered all my questions about my illness.</td><td class="text-center"><input type="radio" name="q21" /></td><td class="text-center"><input type="radio" name="q21" /></td><td class="text-center"><input type="radio" name="q21" /></td><td class="text-center"><input type="radio" name="q21" /></td><td class="text-center"><input type="radio" name="q21" /></td></tr>
+		<tr class="inpatient-only"><td>22. I was very bored at the hospital.</td><td class="text-center"><input type="radio" name="q22" /></td><td class="text-center"><input type="radio" name="q22" /></td><td class="text-center"><input type="radio" name="q22" /></td><td class="text-center"><input type="radio" name="q22" /></td><td class="text-center"><input type="radio" name="q22" /></td></tr>
+		<tr class="inpatient-only"><td>23. When I needed help at night, there was always a nurse to help me.</td><td class="text-center"><input type="radio" name="q23" /></td><td class="text-center"><input type="radio" name="q23" /></td><td class="text-center"><input type="radio" name="q23" /></td><td class="text-center"><input type="radio" name="q23" /></td><td class="text-center"><input type="radio" name="q23" /></td></tr>
+		<tr class="inpatient-only"><td>24. I did not feel safe at night at the hospital.</td><td class="text-center"><input type="radio" name="q24" /></td><td class="text-center"><input type="radio" name="q24" /></td><td class="text-center"><input type="radio" name="q24" /></td><td class="text-center"><input type="radio" name="q24" /></td><td class="text-center"><input type="radio" name="q24" /></td></tr>
+		<tr class="inpatient-only"><td>25. The hospital will assist me to get a lift home.</td><td class="text-center"><input type="radio" name="q25" /></td><td class="text-center"><input type="radio" name="q25" /></td><td class="text-center"><input type="radio" name="q25" /></td><td class="text-center"><input type="radio" name="q25" /></td><td class="text-center"><input type="radio" name="q25" /></td></tr>
+		<tr class="inpatient-only"><td>26. The hospital will tell my local health clinic about my future care needs.</td><td class="text-center"><input type="radio" name="q26" /></td><td class="text-center"><input type="radio" name="q26" /></td><td class="text-center"><input type="radio" name="q26" /></td><td class="text-center"><input type="radio" name="q26" /></td><td class="text-center"><input type="radio" name="q26" /></td></tr>
+		<tr class="inpatient-only"><td>27. If my friends are sick, I will tell them to come to this hospital.</td><td class="text-center"><input type="radio" name="q27" /></td><td class="text-center"><input type="radio" name="q27" /></td><td class="text-center"><input type="radio" name="q27" /></td><td class="text-center"><input type="radio" name="q27" /></td><td class="text-center"><input type="radio" name="q27" /></td></tr>
+	</tbody>
+	</table>
+
+<div class="row">
+    <div class="col-xs-1">
+        <button class="btn btn-default">Close</button>
+    </div>
+    <div class="col-xs-9"></div>
+    <div class="col-xs-1">
+        <button class="btn btn-primary">Save</button>
+    </div>
+    <div class="col-xs-1">
+        <button class="btn btn-danger">Delete</button>
+    </div>
+</div>
