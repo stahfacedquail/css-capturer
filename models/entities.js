@@ -17,7 +17,10 @@ var Facilities = bookshelf.Collection.extend({
 });
 
 var Questionnaire = bookshelf.Model.extend({
-	tableName: 'questionnaires'
+	tableName: 'questionnaires',
+	responses: function() {
+		return this.hasMany(Response, 'questionnaire_id');
+	}
 });
 
 var Questionnaires = bookshelf.Collection.extend({

@@ -6,6 +6,7 @@
 var express = require('express');
 var routes = require('./routes');
 var questionnaires = require('./routes/questionnaires');
+var questions = require('./routes/questions');
 var http = require('http');
 var path = require('path');
 
@@ -29,6 +30,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/questionnaire', questionnaires.fetch);
+
+app.get('/questions', questions.fetch);
+
+app.post('/response', questionnaires.saveResponse);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

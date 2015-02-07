@@ -5,7 +5,7 @@
 		<label for="startDate" class="col-sm-3 control-label">Date of survey</label>
 		<div id="startDate" class="col-sm-9">
 			<div class="col-sm-4">
-				<select id="startMonth" name="startMonth" class="form-control">
+				<select id="startMonth" name="start_month" class="form-control">
 					<option value="1">January</option>
 					<option value="2">February</option>
 					<option value="3">March</option>
@@ -22,7 +22,7 @@
 			</div>
 			
 			<div class="col-sm-4">
-				<select id="startYear" name="startYear" class="form-control">
+				<select id="startYear" name="start_year" class="form-control">
 					<% for(var i = new Date(Date.now()).getFullYear(); i >= 1990; i--) { %>
 						<option value="<%- i %>"><%- i %></option>
 					<% } %>
@@ -35,7 +35,7 @@
 		<label for="facility" class="control-label col-sm-3">Facility</label>
 		<div class="col-sm-9">
 			<div class="col-sm-12">
-				<select id="facility" name="facility" class="form-control">
+				<select id="facility" name="facility_id" class="form-control">
 					<option value="1">Louis Trichardt Memorial Hospital</option>
 					<option value="2">Tshilwavhusiku Health Centre</option>
 				</select>
